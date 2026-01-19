@@ -12,6 +12,12 @@ body {
   color: #111; /* Cor base do texto */
 }
 
+/* Pequeno “reset” para evitar imagens a estourar no mobile */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 /* ===================================================== */
@@ -45,7 +51,7 @@ body {
 }
 
 .hero-title {
-  font-size: 55px; /* Tamanho do título principal */
+  font-size: 55px; /* Desktop */
   font-weight: 700; /* Título em negrito */
   line-height: 1.15; /* Altura de linha para boa leitura */
   margin: 10px 0; /* Espaço acima/abaixo */
@@ -107,7 +113,7 @@ body {
 /* ===================================================== */
 
 .hero-image img {
-  width: 65%; /* Largura relativa ao ecrã */
+  width: 65%; /* Desktop */
   max-width: 850px; /* Limite máximo em desktop */
   margin-top: 45px; /* Espaço acima */
   border-radius: 18px; /* Cantos arredondados */
@@ -129,7 +135,7 @@ body {
   width: 80%; /* Largura geral */
   max-width: 1100px; /* Limite máximo */
   margin: 40px auto 0; /* Centra e dá espaço em cima */
-  display: flex; /* Foto + texto lado a lado */
+  display: flex; /* Foto + texto lado a lado (desktop) */
   align-items: center; /* Alinha verticalmente */
   gap: 40px; /* Espaço entre colunas */
   justify-content: center; /* Centra o conjunto */
@@ -144,7 +150,7 @@ body {
 }
 
 .quem-texto {
-  text-align: left; /* Texto alinhado à esquerda */
+  text-align: left; /* Texto alinhado à esquerda (desktop) */
   max-width: 550px; /* Limite para boa leitura */
 }
 
@@ -158,6 +164,27 @@ body {
   font-size: 17px;
   color: #555;
   line-height: 1.6;
+}
+
+/* Link WhatsApp na secção "Quem Sou Eu" (estava sem estilo) */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 14px;
+  padding: 12px 16px;
+
+  border-radius: 12px;
+  background: #f3f4f6; /* Cinza clarinho */
+  color: #111;
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.whatsapp-link:hover {
+  background: #e9ecef;
 }
 
 
@@ -186,32 +213,28 @@ body {
 
 
 /* ===================================================== */
-/* CARTÕES — ESTILO “TIPO ZÉ”                            */
+/* CARTÕES — ESTILO                                     */
 /* (Imagem à esquerda + texto à direita + botão largo)   */
 /* ===================================================== */
 
-/* ===================================================== */
-/* 1) CARTÃO PRINCIPAL E CARTÕES DE SERVIÇOS (MESMA BASE) */
-/* - Mantemos como estava (NÃO mexemos nos cartões)       */
-/* ===================================================== */
-
+/* Cartão principal + cartões serviços (mesma base) */
 .cartao,
 .card-servico {
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 4px 22px rgba(0,0,0,0.12); /* Sombra igual em todos */
+  box-shadow: 0 4px 22px rgba(0,0,0,0.12);
   overflow: hidden;
 
-  display: grid; /* 2 colunas: imagem | texto */
-  grid-template-columns: 1.05fr 0.95fr; /* Imagem ligeiramente maior */
-  text-align: left; /* Texto alinhado à esquerda */
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  text-align: left;
 }
 
 /* Cartão principal */
 .cartao {
   width: 60%;
   max-width: 860px;
-  margin: 0 auto 32px; /* Centrado + espaço abaixo */
+  margin: 0 auto 32px;
 }
 
 /* Imagem do cartão principal */
@@ -246,7 +269,7 @@ body {
   max-width: 420px;
 }
 
-/* Preço e subpreço (usados em TODOS os cartões) */
+/* Preço e subpreço */
 .cartao-preco {
   font-size: 24px;
   font-weight: 700;
@@ -260,7 +283,7 @@ body {
   margin: 0;
 }
 
-/* BOTÃO AZUL (mantém-se como estava nos cartões) */
+/* Botão azul (cartões) */
 .btn-azul {
   display: inline-flex;
   align-items: center;
@@ -287,7 +310,6 @@ body {
 
 /* ===================================================== */
 /* SECÇÃO SERVIÇOS                                       */
-/* (Mantém como estava)                                  */
 /* ===================================================== */
 
 .secao-servicos {
@@ -352,33 +374,34 @@ body {
 
 /* ===================================================== */
 /* SECÇÃO CONTACTO — AJUSTES (SÓ AQUI!)                  */
-/* - 1) reduzir o "buraco" branco antes do Contacto      */
-/* - 2) letra e tamanho iguais ao texto "Quem Sou Eu"    */
-/* - 3) botão WhatsApp verde com ícone pequeno e bonito  */
+/* - Corrige classe do HTML (texto-contacto)             */
+/* - Reduz “buraco” branco antes do contacto             */
+/* - Botão WhatsApp verde com ícone normal               */
 /* ===================================================== */
 
-/* 1) Menos espaço antes do Contacto (remove o "buraco") */
+/* Menos espaço antes do Contacto */
 #contacto.secao-secundaria {
-  margin-top: 45px; /* antes estava 80px e ficava demasiado */
+  margin-top: 45px; /* antes 80px */
 }
 
-/* 2) Texto do contacto com o mesmo estilo do "Quem Sou Eu" */
-#contacto .nota-secundaria {
-  font-size: 17px;      /* igual ao .quem-texto p */
-  color: #555;          /* igual ao texto da secção "Quem Sou Eu" */
-  line-height: 1.6;     /* igual ao texto da secção "Quem Sou Eu" */
+/* ✅ IMPORTANTE: no teu HTML o parágrafo é .texto-contacto */
+.texto-contacto {
+  font-size: 17px;      /* igual ao texto “Quem Sou Eu” */
+  color: #555;
+  line-height: 1.6;
   font-weight: 400;
-  max-width: 850px;     /* evita linhas gigantes em ecrã grande */
-  margin: 0 auto 22px;  /* centra e dá espaço antes do botão */
+
+  max-width: 850px;
+  margin: 0 auto 22px;
 }
 
-/* Se tiveres partes em bold no texto, ficam com destaque subtil */
-#contacto .nota-secundaria strong {
-  font-weight: 600;
-  color: #111;
+.texto-contacto span {
+  display: inline-block;
+  margin-top: 6px;
+  color: #555;
 }
 
-/* 3) Botão WhatsApp (verde) — apenas para o Contacto */
+/* Botão WhatsApp */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
@@ -404,14 +427,14 @@ body {
   transform: translateY(-2px);
 }
 
-/* Garantia extra: qualquer SVG dentro do botão NÃO fica gigante */
+/* Ícone dentro do botão (garantia que não fica gigante) */
 .btn-whatsapp svg {
   width: 22px;
   height: 22px;
   flex: 0 0 22px;
 }
 
-/* Nota simpática por baixo do botão */
+/* Nota por baixo do botão */
 .contacto-ajuda {
   margin-top: 14px;
   font-size: 15px;
@@ -421,18 +444,98 @@ body {
 
 
 /* ===================================================== */
+/* RESPONSIVO — TABLET (melhor leitura)                  */
+/* (evita layouts “apertados” como nos teus prints)      */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+  /* Hero: títulos mais controlados */
+  .hero-title {
+    font-size: 44px;
+  }
+
+  .titulo-secundario {
+    font-size: 40px;
+  }
+
+  /* “Quem sou eu” passa a coluna para não ficar apertado */
+  .quem-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quem-texto {
+    text-align: center;
+  }
+
+  .quem-texto p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 560px;
+  }
+}
+
+
+
+/* ===================================================== */
 /* RESPONSIVO — TELEMÓVEL                                */
-/* (Apenas em ecrãs pequenos escondemos as imagens)       */
+/* (Aqui está o “mobile-first” da opção 2)               */
 /* ===================================================== */
 
 @media (max-width: 600px) {
+  /* HERO — tipografia mobile */
+  .hero {
+    padding: 28px 16px;
+  }
+
+  .hero-title {
+    font-size: 34px; /* antes 55px — era gigante no mobile */
+    line-height: 1.12;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  /* Botões do topo em coluna (fica mais “clean”) */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-contacto,
+  .btn-servicos {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Imagem do topo ocupa mais largura no telemóvel */
+  .hero-image img {
+    width: 92%;
+    margin-top: 22px;
+    border-radius: 16px;
+  }
+
+  /* Títulos das secções (estavam enormes no mobile) */
+  .titulo-secundario {
+    font-size: 34px;
+  }
+
+  .nota-secundaria {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  /* Cartões em mobile */
   .cartao,
   .grelha-servicos {
     width: 92%;
     max-width: none;
   }
 
-  /* Em telemóvel escondemos imagens */
+  /* Esconder imagens nos cartões em telemóvel */
   .cartao-imagem {
     display: none;
   }
@@ -441,7 +544,6 @@ body {
     display: none;
   }
 
-  /* Cartões passam a ser só texto */
   .cartao,
   .card-servico {
     grid-template-columns: 1fr;
@@ -452,29 +554,21 @@ body {
     padding: 22px;
   }
 
-  .cartao-texto h3,
-  .card-servico .coluna-texto h3 {
-    font-size: 26px;
-  }
-
-  .cartao-preco,
-  .card-servico .cartao-preco {
-    font-size: 22px;
-  }
-
+  /* Botões dos cartões */
   .btn-azul {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
   }
 
-  /* Contacto mais compacto em mobile */
+  /* Contacto mais compacto */
   #contacto.secao-secundaria {
     margin-top: 34px;
   }
 
-  #contacto .nota-secundaria {
+  .texto-contacto {
     font-size: 16px;
     margin-bottom: 18px;
+    padding: 0 6px;
   }
 
   .btn-whatsapp {

@@ -1,17 +1,18 @@
 /* ===================================================== */
 /* ESTILOS GERAIS DO SITE                                */
+/* (Define fonte, cores base e alinhamento global)       */
 /* ===================================================== */
 
 body {
-  margin: 0;
+  margin: 0; /* Remove margens padrão do browser */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
-  text-align: center;
-  color: #111;
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Fonte principal */
+  background-color: #ffffff; /* Fundo branco */
+  text-align: center; /* Texto centrado por defeito */
+  color: #111; /* Cor base do texto */
 }
 
-/* Evita imagens a rebentar no mobile */
+/* Pequeno “reset” para evitar imagens a estourar no mobile */
 img {
   max-width: 100%;
   height: auto;
@@ -20,132 +21,137 @@ img {
 
 
 /* ===================================================== */
-/* SECÇÃO HERO                                          */
+/* SECÇÃO HERO — TOPO DO SITE                            */
+/* (Área de apresentação inicial)                        */
 /* ===================================================== */
 
 .hero {
-  padding: 40px 20px;
+  padding: 40px 20px; /* Espaço interno (vertical e horizontal) */
 }
 
+/* Linha com avatar + nome */
 .hero-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  display: flex; /* Coloca elementos em linha */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 10px; /* Espaço entre avatar e nome */
+  margin-bottom: 20px; /* Espaço abaixo */
 }
 
 .hero-avatar {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 45px; /* Largura do avatar */
+  height: 45px; /* Altura do avatar */
+  border-radius: 50%; /* Torna a imagem circular */
+  object-fit: cover; /* Corta/ajusta a imagem para preencher */
 }
 
 .hero-name {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 18px; /* Tamanho do nome */
+  font-weight: 500; /* Peso do texto */
 }
 
 .hero-title {
-  font-size: 55px;
-  font-weight: 700;
-  line-height: 1.15;
-  margin: 10px 0;
+  font-size: 55px; /* Desktop */
+  font-weight: 700; /* Título em negrito */
+  line-height: 1.15; /* Altura de linha para boa leitura */
+  margin: 10px 0; /* Espaço acima/abaixo */
 }
 
 .hero-subtitle {
-  font-size: 20px;
-  color: #333;
-  font-weight: 300;
-  max-width: 700px;
-  margin: 0 auto 30px;
+  font-size: 20px; /* Subtítulo */
+  color: #333; /* Cor ligeiramente mais suave */
+  font-weight: 300; /* Mais leve */
+  max-width: 700px; /* Limite de largura do texto */
+  margin: 0 auto 30px; /* Centra e dá espaço abaixo */
 }
 
 
 
 /* ===================================================== */
-/* BOTÕES DO TOPO                                       */
+/* BOTÕES DO TOPO                                        */
+/* (Botões de CTA: Contacto e Serviços)                  */
 /* ===================================================== */
 
 .hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex; /* Botões lado a lado */
+  justify-content: center; /* Centra os botões */
+  gap: 20px; /* Espaço entre botões */
 }
 
 .btn-contacto {
-  padding: 12px 28px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  background: linear-gradient(90deg, #ff3c3c, #5851ff);
-  font-weight: 700;
-  font-size: 17px;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  padding: 12px 28px; /* Tamanho do botão */
+  color: #fff; /* Texto branco */
+  text-decoration: none; /* Remove sublinhado */
+  border-radius: 30px; /* Botão arredondado */
+  background: linear-gradient(90deg, #ff3c3c, #5851ff); /* Gradiente */
+  font-weight: bold; /* Texto forte */
+  font-size: 17px; /* Tamanho do texto */
+  transition: 0.3s ease; /* Transição suave */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25); /* Sombra */
 }
 
 .btn-contacto:hover {
-  transform: scale(1.06);
+  transform: scale(1.07); /* Efeito hover */
 }
 
 .btn-servicos {
-  color: #3b82f6;
-  text-decoration: none;
-  padding: 12px 20px;
-  font-size: 17px;
+  color: #3b82f6; /* Azul */
+  text-decoration: none; /* Sem sublinhado */
+  padding: 12px 20px; /* Espaçamento */
+  font-size: 17px; /* Tamanho do texto */
 }
 
 .btn-servicos:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Sublinha no hover */
 }
 
 
 
 /* ===================================================== */
-/* IMAGEM HERO                                          */
+/* IMAGEM PRINCIPAL DO TOPO                              */
+/* (Imagem grande em destaque)                           */
 /* ===================================================== */
 
 .hero-image img {
-  width: 65%;
-  max-width: 850px;
-  margin-top: 45px;
-  border-radius: 18px;
-  box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+  width: 65%; /* Desktop */
+  max-width: 850px; /* Limite máximo em desktop */
+  margin-top: 45px; /* Espaço acima */
+  border-radius: 18px; /* Cantos arredondados */
+  box-shadow: 0 6px 22px rgba(0,0,0,0.18); /* Sombra */
 }
 
 
 
 /* ===================================================== */
-/* SECÇÃO "QUEM SOU EU"                                  */
+/* SECÇÃO QUEM SOU EU                                    */
+/* (Apresentação com foto e texto)                       */
 /* ===================================================== */
 
 .quem-sou-eu {
-  margin-top: 80px;
+  margin-top: 80px; /* Espaço acima da secção */
 }
 
 .quem-container {
-  width: 80%;
-  max-width: 1100px;
-  margin: 40px auto 0;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  justify-content: center;
+  width: 80%; /* Largura geral */
+  max-width: 1100px; /* Limite máximo */
+  margin: 40px auto 0; /* Centra e dá espaço em cima */
+  display: flex; /* Foto + texto lado a lado (desktop) */
+  align-items: center; /* Alinha verticalmente */
+  gap: 40px; /* Espaço entre colunas */
+  justify-content: center; /* Centra o conjunto */
 }
 
 .quem-imagem img {
-  width: 220px;
+  width: 220px; /* Tamanho da foto */
   height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border-radius: 50%; /* Circular */
+  object-fit: cover; /* Ajuste de recorte */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* Sombra */
 }
 
 .quem-texto {
-  text-align: left;
-  max-width: 550px;
+  text-align: left; /* Texto alinhado à esquerda (desktop) */
+  max-width: 550px; /* Limite para boa leitura */
 }
 
 .quem-texto h3 {
@@ -160,27 +166,36 @@ img {
   line-height: 1.6;
 }
 
+/* Link WhatsApp na secção "Quem Sou Eu" */
 .whatsapp-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
   margin-top: 14px;
   padding: 12px 16px;
+
   border-radius: 12px;
-  background: #f3f4f6;
+  background: #f3f4f6; /* Cinza clarinho */
   color: #111;
   text-decoration: none;
+
   font-weight: 600;
+}
+
+.whatsapp-link:hover {
+  background: #e9ecef;
 }
 
 
 
 /* ===================================================== */
-/* SECÇÕES GENÉRICAS                                     */
+/* SECÇÃO SECUNDÁRIA (TÍTULOS E NOTAS)                   */
+/* (Usada em "Comece Agora", "Contacto", etc.)           */
 /* ===================================================== */
 
 .secao-secundaria {
-  margin-top: 80px;
+  margin-top: 80px; /* Espaço acima da secção */
 }
 
 .titulo-secundario {
@@ -191,15 +206,18 @@ img {
 
 .nota-secundaria {
   font-size: 22px;
+  color: #040404;
   margin-bottom: 40px;
 }
 
 
 
 /* ===================================================== */
-/* CARTÕES (CORREÇÃO DEFINITIVA)                         */
+/* CARTÕES — ESTILO                                     */
+/* (Imagem à esquerda + texto à direita + botão largo)   */
 /* ===================================================== */
 
+/* Cartão principal + cartões serviços (mesma base) */
 .cartao,
 .card-servico {
   background: #fff;
@@ -219,42 +237,31 @@ img {
   margin: 0 auto 32px;
 }
 
-/* Imagens dos cartões */
-.cartao-imagem,
-.coluna-imagem {
+/* Imagem do cartão principal */
+.cartao-imagem {
   display: flex;
 }
 
-.cartao-imagem img,
-.coluna-imagem img {
+.cartao-imagem img {
   width: 100%;
   height: 100%;
   max-height: 360px;
   object-fit: cover;
+  object-position: center;
 }
 
-/* ===================================================== */
-/* 🔥 CORREÇÃO IMPORTANTE                                */
-/* Texto vira FLEX para alinhar botões                  */
-/* ===================================================== */
-
-.cartao-texto,
-.coluna-texto {
+/* Texto do cartão principal */
+.cartao-texto {
   padding: 30px 34px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
-.cartao-texto h3,
-.card-servico .coluna-texto h3 {
+.cartao-texto h3 {
   font-size: 25px;
   margin: 0 0 14px;
   font-weight: 700;
 }
 
-.cartao-texto p,
-.card-servico .coluna-texto p {
+.cartao-texto p {
   font-size: 16px;
   color: #555;
   line-height: 1.6;
@@ -262,31 +269,37 @@ img {
   max-width: 420px;
 }
 
-/* Preços */
+/* Preço e subpreço */
 .cartao-preco {
   font-size: 24px;
   font-weight: 700;
+  color: #000;
   margin: 20px 0 6px;
 }
 
 .cartao-subpreco {
   font-size: 15px;
   color: #444;
+  margin: 0;
 }
 
-/* Botões SEMPRE alinhados */
+/* Botão azul (cartões) */
 .btn-azul {
-  margin-top: auto;               /* 🔥 ISTO resolve o problema */
-  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 260px;
+  margin-top: 22px;
 
   background: #007bff;
-  color: #fff;
-  text-decoration: none;
   padding: 14px 22px;
   border-radius: 10px;
+
+  color: #fff;
+  text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  width: 260px;
 }
 
 .btn-azul:hover {
@@ -296,39 +309,129 @@ img {
 
 
 /* ===================================================== */
-/* SECÇÃO CONTACTO                                      */
+/* SECÇÃO SERVIÇOS                                       */
 /* ===================================================== */
 
-#contacto.secao-secundaria {
-  margin-top: 45px;
+.secao-servicos {
+  padding: 0 20px 60px;
 }
 
-.texto-contacto {
-  font-size: 17px;
+.grelha-servicos {
+  width: 60%;
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 32px;
+}
+
+/* Imagem dos serviços */
+.coluna-imagem {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.coluna-imagem img {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Texto dos serviços */
+.coluna-texto {
+  padding: 30px 34px;
+}
+
+.card-servico .coluna-texto h3 {
+  font-size: 25px;
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.card-servico .coluna-texto p {
+  font-size: 16px;
   color: #555;
   line-height: 1.6;
+  margin: 0 0 12px;
+  max-width: 420px;
+}
+
+.card-servico .cartao-preco {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 20px 0 6px;
+}
+
+.card-servico .cartao-subpreco {
+  font-size: 15px;
+  color: #444;
+  margin: 0;
+}
+
+
+
+/* ===================================================== */
+/* SECÇÃO CONTACTO — AJUSTES                             */
+/* ===================================================== */
+
+/* Menos espaço antes do Contacto */
+#contacto.secao-secundaria {
+  margin-top: 45px; /* antes 80px */
+}
+
+/* Parágrafo do contacto (no HTML é .texto-contacto) */
+.texto-contacto {
+  font-size: 17px; /* igual ao texto “Quem Sou Eu” */
+  color: #555;
+  line-height: 1.6;
+  font-weight: 400;
+
   max-width: 850px;
   margin: 0 auto 22px;
 }
 
+.texto-contacto span {
+  display: inline-block;
+  margin-top: 6px;
+  color: #555;
+}
+
+/* Botão WhatsApp */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+
   background: #25D366;
   color: #fff;
+
   padding: 14px 26px;
   border-radius: 10px;
+
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
+
+  transition: background 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* Ícone dentro do botão (garantia que não fica gigante) */
 .btn-whatsapp svg {
   width: 22px;
   height: 22px;
+  flex: 0 0 22px;
 }
 
+/* Nota por baixo do botão */
 .contacto-ajuda {
   margin-top: 14px;
   font-size: 15px;
@@ -338,10 +441,11 @@ img {
 
 
 /* ===================================================== */
-/* RESPONSIVO — TABLET                                  */
+/* RESPONSIVO — TABLET (melhor leitura)                  */
 /* ===================================================== */
 
 @media (max-width: 900px) {
+  /* Hero: títulos mais controlados */
   .hero-title {
     font-size: 44px;
   }
@@ -350,6 +454,7 @@ img {
     font-size: 40px;
   }
 
+  /* “Quem sou eu” passa a coluna para não ficar apertado */
   .quem-container {
     flex-direction: column;
     text-align: center;
@@ -358,37 +463,84 @@ img {
   .quem-texto {
     text-align: center;
   }
+
+  .quem-texto p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 560px;
+  }
 }
 
 
 
 /* ===================================================== */
 /* RESPONSIVO — TELEMÓVEL                                */
+/* (Aqui está o “mobile-first” da opção 2)               */
 /* ===================================================== */
 
 @media (max-width: 600px) {
+  /* HERO — tipografia mobile */
+  .hero {
+    padding: 28px 16px;
+  }
+
   .hero-title {
-    font-size: 34px;
+    font-size: 34px; /* antes 55px — era gigante no mobile */
+    line-height: 1.12;
   }
 
   .hero-subtitle {
     font-size: 16px;
+    margin-bottom: 18px;
   }
 
+  /* Botões do topo em coluna (fica mais “clean”) */
   .hero-buttons {
     flex-direction: column;
+    gap: 12px;
+    align-items: center;
   }
 
+  .btn-contacto,
+  .btn-servicos {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Imagem do topo ocupa mais largura no telemóvel */
+  .hero-image img {
+    width: 92%;
+    margin-top: 22px;
+    border-radius: 16px;
+  }
+
+  /* Títulos das secções (estavam enormes no mobile) */
+  .titulo-secundario {
+    font-size: 34px;
+  }
+
+  .nota-secundaria {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  /* Cartões em mobile */
   .cartao,
   .grelha-servicos {
     width: 92%;
+    max-width: none;
   }
 
-  .cartao-imagem,
+  /* Esconder imagens nos cartões em telemóvel */
+  .cartao-imagem {
+    display: none;
+  }
+
   .coluna-imagem {
     display: none;
   }
 
+  /* Cartões passam a 1 coluna */
   .cartao,
   .card-servico {
     grid-template-columns: 1fr;
@@ -396,23 +548,61 @@ img {
 
   .cartao-texto,
   .coluna-texto {
-    text-align: center;
+    padding: 22px;
   }
 
+  /* =================================================== */
+  /* ✅ CORREÇÃO PRINCIPAL: OS 3 CARTÕES IGUAIS NO MOBILE  */
+  /* - Evita que o cartão "Site Profissional" pareça outro */
+  /* - Centra texto e botão em TODOS os cartões           */
+  /* =================================================== */
+
+  /* 1) Alinhamento consistente (títulos, texto e botões) */
+  .cartao-texto,
+  .coluna-texto {
+    text-align: center; /* antes estava à esquerda */
+  }
+
+  /* 2) Remove limites que criam quebras diferentes */
+  .cartao-texto p,
+  .card-servico .coluna-texto p {
+    max-width: none; /* antes 420px */
+  }
+
+  /* 3) Botão centrado e igual em todos os cartões */
   .btn-azul {
-    align-self: center;
+    display: flex;          /* ocupa melhor a linha */
     width: 100%;
     max-width: 340px;
+    margin: 18px auto 0;    /* auto = centra em todos */
+  }
+
+  /* Contacto mais compacto */
+  #contacto.secao-secundaria {
+    margin-top: 34px;
+  }
+
+  .texto-contacto {
+    font-size: 16px;
+    margin-bottom: 18px;
+    padding: 0 6px;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
+    max-width: 360px;
   }
 }
 
 
 
 /* ===================================================== */
-/* RODAPÉ                                               */
+/* RODAPÉ                                                */
 /* ===================================================== */
 
 .footer {
+  background: #ffffff;
+  color: #000;
   padding: 25px 10px;
   margin-top: 60px;
   font-size: 15px;
@@ -422,4 +612,8 @@ img {
   color: #007bff;
   text-decoration: none;
   font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }

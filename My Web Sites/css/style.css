@@ -166,7 +166,7 @@ img {
   line-height: 1.6;
 }
 
-/* Link WhatsApp na secção "Quem Sou Eu" (estava sem estilo) */
+/* Link WhatsApp na secção "Quem Sou Eu" */
 .whatsapp-link {
   display: inline-flex;
   align-items: center;
@@ -373,10 +373,7 @@ img {
 
 
 /* ===================================================== */
-/* SECÇÃO CONTACTO — AJUSTES (SÓ AQUI!)                  */
-/* - Corrige classe do HTML (texto-contacto)             */
-/* - Reduz “buraco” branco antes do contacto             */
-/* - Botão WhatsApp verde com ícone normal               */
+/* SECÇÃO CONTACTO — AJUSTES                             */
 /* ===================================================== */
 
 /* Menos espaço antes do Contacto */
@@ -384,9 +381,9 @@ img {
   margin-top: 45px; /* antes 80px */
 }
 
-/* ✅ IMPORTANTE: no teu HTML o parágrafo é .texto-contacto */
+/* Parágrafo do contacto (no HTML é .texto-contacto) */
 .texto-contacto {
-  font-size: 17px;      /* igual ao texto “Quem Sou Eu” */
+  font-size: 17px; /* igual ao texto “Quem Sou Eu” */
   color: #555;
   line-height: 1.6;
   font-weight: 400;
@@ -445,7 +442,6 @@ img {
 
 /* ===================================================== */
 /* RESPONSIVO — TABLET (melhor leitura)                  */
-/* (evita layouts “apertados” como nos teus prints)      */
 /* ===================================================== */
 
 @media (max-width: 900px) {
@@ -544,6 +540,7 @@ img {
     display: none;
   }
 
+  /* Cartões passam a 1 coluna */
   .cartao,
   .card-servico {
     grid-template-columns: 1fr;
@@ -554,10 +551,30 @@ img {
     padding: 22px;
   }
 
-  /* Botões dos cartões */
+  /* =================================================== */
+  /* ✅ CORREÇÃO PRINCIPAL: OS 3 CARTÕES IGUAIS NO MOBILE  */
+  /* - Evita que o cartão "Site Profissional" pareça outro */
+  /* - Centra texto e botão em TODOS os cartões           */
+  /* =================================================== */
+
+  /* 1) Alinhamento consistente (títulos, texto e botões) */
+  .cartao-texto,
+  .coluna-texto {
+    text-align: center; /* antes estava à esquerda */
+  }
+
+  /* 2) Remove limites que criam quebras diferentes */
+  .cartao-texto p,
+  .card-servico .coluna-texto p {
+    max-width: none; /* antes 420px */
+  }
+
+  /* 3) Botão centrado e igual em todos os cartões */
   .btn-azul {
+    display: flex;          /* ocupa melhor a linha */
     width: 100%;
     max-width: 340px;
+    margin: 18px auto 0;    /* auto = centra em todos */
   }
 
   /* Contacto mais compacto */
